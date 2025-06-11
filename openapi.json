@@ -1,0 +1,30 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Crypto API",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/data": {
+      "get": {
+        "summary": "Get data from CSV",
+        "parameters": [
+          {
+            "name": "file",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Nom du fichier CSV (ex: XRPUSD_M1.csv)"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Contenu du fichier CSV"
+          }
+        }
+      }
+    }
+  }
+}
