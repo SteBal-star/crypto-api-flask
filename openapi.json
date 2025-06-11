@@ -4,10 +4,15 @@
     "title": "Crypto API",
     "version": "1.0.0"
   },
+  "servers": [
+    {
+      "url": "https://crypto-api-flask.onrender.com"
+    }
+  ],
   "paths": {
     "/data": {
       "get": {
-        "summary": "Get data from CSV",
+        "summary": "Obtenir les données d'un fichier CSV",
         "parameters": [
           {
             "name": "file",
@@ -21,7 +26,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Contenu du fichier CSV"
+            "description": "Retourne les lignes du fichier CSV au format JSON"
           }
         }
       }
